@@ -41,5 +41,30 @@
   font-size: 1.2rem;
 }
 
+/*
+ * =========
+ * Top Bar 1 
+ * =========
+ */
+
+.topbar-1 img {
+  height: 20px;
+}
+
+.topbar-1 .active-icon {
+  height: 40px;
+}
+
+#search {
+  background: #e2e8f0;
+  border: none;
+  border-radius: 10px;
+  height: 1.4rem;
+  width: 375px;
+}
+
+.topbar-1 p {
+  font-weight: bold;
+}
 
 
