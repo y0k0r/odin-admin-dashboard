@@ -67,4 +67,36 @@
   font-weight: bold;
 }
 
+/*
+ * =========
+ * Top Bar 2 
+ * =========
+ */
+
+.topbar-2 span {
+  font-weight: bold;
+}
+
+.topbar-2 h1 {
+  font-size: 1.5rem;
+}
+
+.topbar-2 .active-icon {
+  height: 55px;
+}
+
+.topbar-2 button {
+  border-radius: 15px;
+  border: none;
+  background: #1992d4;
+  width: 100px;
+  height: 30px;
+  padding: 5px ;
+}
+
+.topbar-2 a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
 
