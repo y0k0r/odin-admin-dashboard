@@ -151,3 +151,26 @@
   border: none;
 }
 
+/*
+ * =========
+ * Trending 
+ * =========
+ */
+
+.trending {
+  background: #e2e8f0;
+}
+
+.trending .trending-user img {
+  height: 40px;
+}
+
+.trending .container {
+  background: #fff;
+}
+
+.trending .container {
+  border-radius: 7px;
+  background: #fff;
+  width: 300px;
+}
