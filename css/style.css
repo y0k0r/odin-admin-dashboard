@@ -1,6 +1,7 @@
 * {
    margin: 0;
    padding: 0;
+   box-sizing: border-box;
    }
 
 .sidebar {
@@ -118,3 +119,35 @@
 .card img {
   height: 20px;
 }
+
+/*
+ * =========
+ * Announcements 
+ * =========
+ */
+.announcements {
+  background: #e2e8f0;
+}
+
+.announcements .container {
+  border-radius: 7px;
+  background: #fff;
+  width: 300px;
+}
+
+.announcements h3 {
+  padding: 10px 0 0 10px;
+}
+.announcements .card {
+  padding: 0 20px;
+}
+
+.announcements .card > p {
+  border-bottom: solid 2px #e2e8f0;
+  padding: 0 10px 15px 10px;
+}
+
+.announcements .last-card > p {
+  border: none;
+}
+
