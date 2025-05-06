@@ -100,3 +100,21 @@
   font-weight: bold;
 }
 
+/*
+ * =========
+ * Projects 
+ * =========
+ */
+.projects {
+  background: #e2e8f0;
+}
+.projects .card {
+  border-left: #f0b425 5px solid;
+  border-radius: 5px;
+  background: #fff;
+  width: 250px;
+}
+
+.card img {
+  height: 20px;
+}
