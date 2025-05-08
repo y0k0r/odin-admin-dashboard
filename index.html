@@ -4,10 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Admin Dashboard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
   </head>
   <body>
-    <div class="container">
+    <div class="main-container">
       <div class="sidebar">
         <span><a href="#"><img src="./img/view-dashboard.png" alt="Logo Icon" class="logo">Dashboard</a></span>
         <ul>
@@ -26,69 +29,105 @@
       </div>
 
       <div class="topbar-1">
-        <img src="./img/magnify.svg" alt="Search Icon">
-        <form class="search-bar">
-          <label for="search"></label>
-          <input type="search" name="search" id="search">
-        </form>
-        <img src="./img/bell-ring-outline.svg" alt="Notifications Icon">
-        <img src="./img/woman.png" alt="Active user icon" class="active-icon">
-        <p class="user">Morgan Oakley</p>
+        <div class="left-panel">
+          <img src="./img/magnify.svg" alt="Search Icon">
+          <form class="search-bar">
+            <label for="search"></label>
+            <input type="search" name="search" id="search">
+          </form>
+        </div>
+        <div class="right-panel">
+          <img src="./img/bell-ring-outline.svg" alt="Notifications Icon" class="notification-icon">
+          <a href="#"><img src="./img/woman.png" alt="Active user icon" class="active-icon"></a>
+          <p class="user">Morgan Oakley</p>
+        </div>
       </div>
 
       <div class="topbar-2">
-        <img src="./img/woman.png" alt="Profile Icon" class="active-icon">
-        <span>Hi there,</span> 
-        <h1>Morgan Oakley (@morgan)</h1>
-        <button type="submit"><a href="#">News</a></button>
-        <button type="submit"><a href="#">Upload</a></button>
-        <button type="submit"><a href="#">Share</a></button>
+        <div class="left-panel">
+          <img src="./img/woman.png" alt="Profile Icon" class="active-icon">
+          <div class="greeting">
+            <span>Hi there,</span> 
+            <h1>Morgan Oakley (@morgan)</h1>
+          </div>
+        </div>
+        <div class="right-panel">
+          <button type="submit"><a href="#">News</a></button>
+          <button type="submit"><a href="#">Upload</a></button>
+          <button type="submit" class="last-button"><a href="#">Share</a></button>
+        </div>
       </div>
       
       <div class="projects">
         <h2>Your Projects</h2>
-        <section class="card">
-          <h3 class="project-name">Super Cool Project</h3>
-          <p class = "project-description">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
-          <a href="#"><img src="./img/star-plus-outline.svg" alt="Favorite Icon"></a>
-          <a href="#"><img src="./img/eye-plus-outline.svg" alt="Watch Icon"></a>
-          <a href="#"><img src="./img/source-fork.svg" alt="Git Fork Icon"></a>
-        </section>
-        <section class="card">
-          <h3 class="project-name">Less Cool Project</h3>
-          <p class="project-description">Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor tincidunt, consectetur sapie et, facilisis dolor. Duis sem purus, dignissim ut sapien in, varius pellenteque lactus.</p>
-          <a href="#"><img src="./img/star-plus-outline.svg" alt="Favorite Icon"></a>
-          <a href="#"><img src="./img/eye-plus-outline.svg" alt="Watch Icon"></a>
-          <a href="#"><img src="./img/source-fork.svg" alt="Git Fork Icon"></a>
-        </section>
-        <section class="card">
-          <h3 class="project-name">Impossible App</h3>
-          <p class="project-description">In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a placerat velit sagittis id.</p>
-          <a href="#"><img src="./img/star-plus-outline.svg" alt="Favorite Icon"></a>
-          <a href="#"><img src="./img/eye-plus-outline.svg" alt="Watch Icon"></a>
-          <a href="#"><img src="./img/source-fork.svg" alt="Git Fork Icon"></a>
-        </section>
-        <section class="card">
-          <h3 class="project-name">Easy Peasy App</h3>
-          <p class="project-description">Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim urna eget accumsan aliquam. Curabitur dignissim nisi in tortor commodo, ac bibendum magna tincidunt.</p>
-          <a href="#"><img src="./img/star-plus-outline.svg" alt="Favorite Icon"></a>
-          <a href="#"><img src="./img/eye-plus-outline.svg" alt="Watch Icon"></a>
-          <a href="#"><img src="./img/source-fork.svg" alt="Git Fork Icon"></a>
-        </section>
-        <section class="card">
-          <h3>Ad Blocker</h3>
-          <p>Quisque eget rutrum nisl. Nam augue justo, cursu vitae metsu vel, pharetra hendrerit felis. Aliquam sed malesuada eros</p>
-          <a href="#"><img src="./img/star-plus-outline.svg" alt="Favorite Icon"></a>
-          <a href="#"><img src="./img/eye-plus-outline.svg" alt="Watch Icon"></a>
-          <a href="#"><img src="./img/source-fork.svg" alt="Git Fork Icon"></a>
-        </section>
-        <section class="card">
-          <h3>Money Maker</h3>
-          <p>Praesent convallis, libero quis congue elementum, nunc ante faucibus sapien, ac scelerisque tortor purus sit amet ex. Pellentesque mollis nec sem vel aliquam.</p>
-          <a href="#"><img src="./img/star-plus-outline.svg" alt="Favorite Icon"></a>
-          <a href="#"><img src="./img/eye-plus-outline.svg" alt="Watch Icon"></a>
-          <a href="#"><img src="./img/source-fork.svg" alt="Git Fork Icon"></a>
-        </section>
+          <div class="cards">
+            <section class="card">
+              <div class="project-details">
+                <h3 class="project-name">Super Cool Project</h3>
+                <p class = "project-description">Sed tempus ut lacus ut scelerisque. Suspendisse sollicitudin nibh erat, id facilisis felis accumsan nec.</p>
+              </div>
+              <div class="icons">
+                <a href="#"><img src="./img/star-plus-outline.svg" alt="Favorite Icon"></a>
+                <a href="#"><img src="./img/eye-plus-outline.svg" alt="Watch Icon"></a>
+                <a href="#"><img src="./img/source-fork.svg" alt="Git Fork Icon"></a>
+              </div>
+            </section>
+            <section class="card">
+              <div class="project-details">
+                <h3 class="project-name">Less Cool Project</h3>
+                <p class="project-description">Nullam condimentum ipsum ut lectus vehicula consectetur. Quisque sed dolor tincidunt, consectetur sapie et, facilisis dolor. Duis sem purus, dignissim ut sapien in, varius pellenteque lactus.</p>
+              </div>
+              <div class="icons">
+                <a href="#"><img src="./img/star-plus-outline.svg" alt="Favorite Icon"></a>
+                <a href="#"><img src="./img/eye-plus-outline.svg" alt="Watch Icon"></a>
+                <a href="#"><img src="./img/source-fork.svg" alt="Git Fork Icon"></a>
+              </div>
+            </section>
+            <section class="card">
+              <div class="project-details">
+                <h3 class="project-name">Impossible App</h3>
+                <p class="project-description">In hac habitasse platea dictumst. Vivamus dictum rutrum arcu, a placerat velit sagittis id.</p>
+              </div>
+              <div class="icons">
+                <a href="#"><img src="./img/star-plus-outline.svg" alt="Favorite Icon"></a>
+                <a href="#"><img src="./img/eye-plus-outline.svg" alt="Watch Icon"></a>
+                <a href="#"><img src="./img/source-fork.svg" alt="Git Fork Icon"></a>
+              </div>
+            </section>
+            <section class="card">
+              <div class="project-details">
+                <h3 class="project-name">Easy Peasy App</h3>
+                <p class="project-description">Etiam cursus eros ac efficitur fringilla. Vestibulum dignissim urna eget accumsan aliquam. Curabitur dignissim nisi in tortor commodo, ac bibendum magna tincidunt.</p>
+              </div>
+              <div class="icons">
+                <a href="#"><img src="./img/star-plus-outline.svg" alt="Favorite Icon"></a>
+                <a href="#"><img src="./img/eye-plus-outline.svg" alt="Watch Icon"></a>
+                <a href="#"><img src="./img/source-fork.svg" alt="Git Fork Icon"></a>
+              </div>
+            </section>
+            <section class="card">
+              <div class="project-details">
+                <h3>Ad Blocker</h3>
+                <p>Quisque eget rutrum nisl. Nam augue justo, cursu vitae metsu vel, pharetra hendrerit felis. Aliquam sed malesuada eros</p>
+              </div>
+              <div class="icons">
+                <a href="#"><img src="./img/star-plus-outline.svg" alt="Favorite Icon"></a>
+                <a href="#"><img src="./img/eye-plus-outline.svg" alt="Watch Icon"></a>
+                <a href="#"><img src="./img/source-fork.svg" alt="Git Fork Icon"></a>
+              </div>
+            </section>
+            <section class="card">
+              <div class="project-details">
+                <h3>Money Maker</h3>
+                <p>Praesent convallis, libero quis congue elementum, nunc ante faucibus sapien, ac scelerisque tortor purus sit amet ex. Pellentesque mollis nec sem vel aliquam.</p>
+              </div>
+              <div class="icons">
+                <a href="#"><img src="./img/star-plus-outline.svg" alt="Favorite Icon"></a>
+                <a href="#"><img src="./img/eye-plus-outline.svg" alt="Watch Icon"></a>
+                <a href="#"><img src="./img/source-fork.svg" alt="Git Fork Icon"></a>
+              </div>
+            </section>
+          </div>
       </div>
       <div class="announcements">
         <h2>Announcements</h2>
@@ -112,23 +151,31 @@
         <div class="container">
           <div class="trending-user">
             <img src="./img/girl.png" alt="User Profile Icon"> 
-            <span class="username">@tegan</span>
-            <p class="trending-project">World Peace Builder</p> 
+            <div>
+              <span class="username">@tegan</span>
+              <p class="trending-project">World Peace Builder</p> 
+            </div>
           </div>
           <div class="trending-user">
            <img src="./img/woman.png" alt="User Profile Icon"> 
-           <span class="username">@morgan</span>
-           <p class="trending-project">Super Cool Project</p>
+           <div>
+             <span class="username">@morgan</span>
+             <p class="trending-project">Super Cool Project</p>
+           </div>
           </div>          
           <div class="trending-user">
             <img src="./img/man.png" alt="User Profile Icon">
-            <span class="username">@kendall</span>
-            <p class="trending-project">Life Changing App</p>
+            <div>
+              <span class="username">@kendall</span>
+              <p class="trending-project">Life Changing App</p>
+            </div>
           </div>
           <div class="trending-user">
             <img src="./img/boy.png" alt="User Profile Icon">
-            <span class="username">@alex</span>
-            <p class="trending-project">No Traffic Maker</p>
+            <div>
+              <span class="username">@alex</span>
+              <p class="trending-project">No Traffic Maker</p>
+            </div>
           </div>
         </div>
       </div>
